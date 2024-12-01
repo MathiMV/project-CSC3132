@@ -1,10 +1,10 @@
 <?php
-require_once 'dbconf.php';
+require_once 'dbconfig.php';
 
 try {
 
 	
-	$sql = "SELECT * FROM STUDENTS";
+	$sql = "SELECT * FROM students";
 
 	
 	$result = mysqli_query($connect,$sql);
