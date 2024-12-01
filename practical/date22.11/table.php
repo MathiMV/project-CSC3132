@@ -33,7 +33,7 @@ try {
 			}
 			echo "</tr>";
 		}
-		echo "</table>";
+		echo "</table>"."<br>";
 	} else {
 		echo "No results";
 	}
