@@ -1,19 +1,19 @@
 <?php
-define('SERVERNAME', '127.0.0.1');
+define('HOST', '127.0.0.1:3306');
 define('USERNAME', 'root');
-define('PASSWORD', 'mariadb');
-define('DBNAME', 'parking');
-try {
-	$connect = mysqli_connect(SERVERNAME,USERNAME,PASSWORD,DBNAME);
-	if (!$connect) {
-		die("connection failed".mysqli_connect_error());
-	} 
-	else {
-		
-	}
-} 
-catch (Exception $e) {
-	die($e->getMessage());
-}
+define('PWD', 'mariadb');
+define('DB', 'parking');
 
+try {
+    $connection = mysqli_connect(HOST,USERNAME,PWD,DB);
+    if(!$connection){
+        die("Database not connected!");
+    }
+    else{
+        // echo "Database connected succefully!";
+    }
+} catch (Exception $e) {
+    die($e->getMessage());
+}
+echo "<br>";
 ?>
